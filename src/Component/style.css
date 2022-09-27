@@ -1,0 +1,23 @@
+.block{
+   height:auto;
+   width: 300px;
+   border: 2px solid black;
+   margin-Top: 10px;
+}
+.button{
+   margin-left: 30%;
+   margin-bottom: 10px;
+   
+}
+
+@media screen and (max-width: 500px) {
+   #img{
+    display: none;
+   } 
+    /* .block{
+   height: auto;
+   width: 250px;
+   margin-left: 50px;
+  } */
+  }
+ 
