@@ -1,30 +1,197 @@
-.block{
-   height:auto;
-   width: 300px;
-   border: 2px solid black;
-   margin-Top: 10px;
+.first_box{
+    height: 50px;
+    width:500px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px;
+    margin-left: 30%;
 }
 .button{
-   margin-left: 30%;
-   margin-bottom: 10px;
+    width: 150px;
+    font-size: 25px;
+    text-decoration: none;
+    height: 50px;
+    color: black;
+    border: 2px solid black;
+}
+.second_box{
+    height: 400px;
+    width:400px;
+    margin: 00px;
+    margin-left: 33%;
+    border:2px solid black;
+}
+.login{
+    height: 40px;
+    width: 250px;
+margin: 20px;
+font-size: 20px;
+}
+.admin_nav{
+display: flex;
+justify-content: space-between;
+font-size: 20px;
+height: 80px;
+width:100%;
+} 
+.admin_box{
+    background-image: url("https://d1ralsognjng37.cloudfront.net/856937ae-0195-47ff-ad37-9c5d59e9c5c2.jpeg");
+    height: 350px;
+    width:400px;
+    margin-left: 33%;
+    border-radius: 25px;
+    border:2px solid black;
+    position: absolute;
+    top:200px;
+}
+.admin_add{
+    height: 40px;
+    width: 250px;
+margin: 25px;
+font-size: 20px; 
+border-radius: 10px; 
+}
+.catego{
+    position: relative;
+    left: 300px;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+}
+.h1{
+    margin-top: 60px;
+    margin-right: 150px;
+}
+.list{
+    display: inline-block;
+    justify-content: space-around;
+    border: 1px solid black;
+    height: 430px;
+    width: 300px;
+    /* margin-left: 10px; */
+    margin-top: 20px;
+    margin-right: 100px;
+   border-radius: 20px;
    
 }
+.lst{
+    position: absolute;
+    top: 100px;
+    left: 20%;
+}
+.sidebar {
+     
+    padding: 0;
+    width: 300px;
+    background-color:grey;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    margin-top: 55px;
+}
+  .sidebar a {
+    display: block;
+    color:black;
+    font-size: 25px;
+    font-weight: 900px;
+    font-style: italic;
+    padding: 16px;
+    padding-top: 55px;
+    text-decoration: none;
+  }
+  .sidebar a:hover{
+    color: white;
+  }
+  .lst_user{
+    position: absolute;
+    top: 100px;
+    left: 20%;
+}
+.list_cart{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    height: 50px;
+    width: 500px;
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-left: 500px;
+   padding: 10px;
+   border-radius: 20px;   
+}
+.heading_cart{
+    display:flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+    color: black;
+}
+.cart_btn{
+    background-color: blue;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+}
+.cart_btn:hover{
+    background-color: red;
+}
+.admin_search{
+    width:300px;
+    margin-left:30%;
+    border-radius: 20px;
+    
+}
 
-.cartbox {
-   display: flex;
-   text-align: center;
-   justify-content: space-between;
-   margin-top: 20px;
-   margin-left: 20px;
-   border-bottom: 2px solid rgb(0, 4, 5);
-   padding-bottom: 5px;
-   width: 500px;
- }
- .cart1{
+
+
+@media screen and (max-width: 500px) {
+   .sidebar{
+    display: none;
+   }
+   .catego{
+    position: relative;
+    left:-71px;
    
-      display: flex;
-      width: 400px;
-      font-weight: bold;
-      margin-left: 10px;
- }
- 
+
+   }
+   .admin_box{
+    margin-left: 10px;
+   }
+   .admin_search{
+    position: relative;
+    left: -40px;
+    top: 10px;
+   }
+   .switch{
+    position: relative;
+    left: -50px;
+   }
+   .user_search{
+    position: relative;
+    left: -120px;
+
+   }
+   .heading_cart{
+    width: 800px;
+   }
+   .list_cart{
+    margin-left: 40px;
+    width: 400px;
+   }
+   .total_cart{
+    position: relative;
+    left: 30px;
+   }
+  }
+
+
+
+  
+        @media screen and (max-width: 800px) {
+            .sidebar{
+                display: none;
+            }
+        }
