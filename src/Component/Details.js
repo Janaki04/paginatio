@@ -1,5 +1,5 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, {useState} from 'react'
+import { useParams  } from 'react-router-dom'
 import {  Grid } from '@mui/material'
 import './style.css'
 import Card from '@mui/material/Card';
@@ -10,15 +10,34 @@ import Typography from '@mui/material/Typography';
 function Details(){
 
 const param= useParams()
-    // console.log(param.id)
 var data= JSON.parse(sessionStorage.getItem('user'))
-    // console.log(data)
 var a=data.filter((value)=>value._id==param.id)
-    // console.log(a)
+const[cart,setCart]=useState([])
+
+const cartHandler=(item)=>{
+    var temp=cart
+    var present=false
+    let check=temp?.map((value)=>{
+      if(value._id==item._id){
+      present=true
+      return( {...value,count:value.count+1})
+      }
+      else{
+        return value
+      }
+    })
+    if(!present){
+   check=[...temp]
+   check.push({...item,count:1})
+    }
+    setCart(check)
+  }
+
+ 
 
 return(
-    <Grid container>
-    {a?.map((item,index)=>
+<Grid container>
+{a?.map((item,index)=>
 <Grid  item lg={3} md={6} sm={12} xs={12}  sx={{ml:'10%', mt:10}}>
 <Card sx={{ maxWidth: 250, height:'100%' }}  key={index}>
 <CardContent>
@@ -30,13 +49,15 @@ return(
 
 <img style={{heigth:200,width:200}} src={`https://empappregular.herokuapp.com/${item.images}`} alt=""
 onError={event => {
-  event.target.src = "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp"
-  event.onerror = null
+  event.target.src = "https://cbrl-ecom-images.s3.amazonaws.com/FY22/Easter-FIS/782337-0.jpg"
+  event.onerror=null
 }}
 />
      
 <Typography variant="body2" color="text.secondary" sx={{color:"blue",fontStyle:'italic'}}>About:{item.about}</Typography>
 <Typography gutterBottom variant="p" component="div" sx={{color:"red",fontStyle:'italic'}}> ~{item.author.name}</Typography>
+<button className="btn btn-primary" onClick={()=>cartHandler(item)} >Add Cart</button><br/><br/>
+
 </CardContent>
     </Card>
      </Grid> 

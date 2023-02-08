@@ -10,14 +10,21 @@
    
 }
 
-@media screen and (max-width: 500px) {
-   #img{
-    display: none;
-   } 
-    /* .block{
-   height: auto;
-   width: 250px;
-   margin-left: 50px;
-  } */
-  }
+.cartbox {
+   display: flex;
+   text-align: center;
+   justify-content: space-between;
+   margin-top: 20px;
+   margin-left: 20px;
+   border-bottom: 2px solid rgb(0, 4, 5);
+   padding-bottom: 5px;
+   width: 500px;
+ }
+ .cart1{
+   
+      display: flex;
+      width: 400px;
+      font-weight: bold;
+      margin-left: 10px;
+ }
  

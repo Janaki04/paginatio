@@ -2,10 +2,7 @@ import './App.css';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Paginatio from './Component/Paginatio';
 import Details from './Component/Details';
-import Location from './Component/Location';
-
-
-
+import Cart from './Component/Cart';
 
 function App() {
   return (
@@ -16,7 +13,7 @@ function App() {
           <Route path="/path" element={<Details/>}>
             <Route path=":id" element={<Details/>}/>
           </Route>
-          <Route path="/location" element={<Location/>}/>
+          <Route path="/cart" element={<Cart />}/>
 </Routes>
 </Router>
 
